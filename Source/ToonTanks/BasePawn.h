@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Components/CapsuleComponent.h"
 #include "BasePawn.generated.h"
 
 UCLASS()
@@ -15,9 +16,25 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int32 kupa = 5;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+
+private:
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components", meta = (Allowprivateaccess = "true"))
+	class UCapsuleComponent* CapsuleComp;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components", meta = (Allowprivateaccess = "true"))
+	UStaticMeshComponent* BaseMesh;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components", meta = (Allowprivateaccess = "true"))
+	UStaticMeshComponent* TurretMesh;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components", meta = (Allowprivateaccess = "true"))
+	USceneComponent* ProjectileSpawnPoint;
+
 
 public:	
 	// Called every frame
