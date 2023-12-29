@@ -31,6 +31,7 @@ private:
 
 	void Move(float value);
 
-	
+	UPROPERTY(EditAnywhere,Category = "Movement")
+	float speed = 300.f;
 	
 };
