@@ -20,9 +20,6 @@ public:
 	int32 kupa = 5;
 
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 
 private:
@@ -36,9 +33,8 @@ private:
 	USceneComponent* ProjectileSpawnPoint;
 
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+
+	
 
 	
 
