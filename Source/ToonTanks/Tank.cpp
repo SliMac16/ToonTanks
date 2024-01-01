@@ -52,6 +52,8 @@ void ATank::Tick(float DeltaTime)
             false,
             -1.f);
 
+        RotateTurret(HitResult.ImpactPoint);
+
     }
 }
 
@@ -85,4 +87,5 @@ void ATank::Turn(float Value){
     AddActorLocalRotation(DeltaRotation, true);
 
 }
+
 

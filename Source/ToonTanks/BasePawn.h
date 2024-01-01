@@ -16,8 +16,11 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int32 kupa = 5;
+	
+protected:
+
+	void RotateTurret(FVector LookAtTarget);
+
 
 
 
