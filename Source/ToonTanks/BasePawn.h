@@ -37,8 +37,8 @@ private:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components", meta = (Allowprivateaccess = "true"))
 	USceneComponent* ProjectileSpawnPoint;
 
-
-
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	TSubclassOf<class AProjectile> ProjectileClass;
 	
 
 	

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -28,5 +29,10 @@ private:
 	
 	UPROPERTY(EditAnywhere,Category = "Combat", meta = (Allowprivateaccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;
+
+	UPROPERTY(EditAnywhere,Category = "Movement", meta = (Allowprivateaccess = "true"))
+	class UProjectileMovementComponent* ProjectileMovementComponent;
+
+	
 
 };

@@ -70,7 +70,7 @@ void ATank::BeginPlay()
 
 void ATank::Move(float Value)
 {
-    UE_LOG(LogTemp, Warning, TEXT("Value: %f"), Value);
+    /*UE_LOG(LogTemp, Warning, TEXT("Value: %f"), Value);*/
 
     FVector DeltaLocation = FVector::ZeroVector;
 
