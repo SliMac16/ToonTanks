@@ -45,14 +45,14 @@ void ATank::Tick(float DeltaTime)
             HitResult);
         
         
-        DrawDebugSphere(
+        /*DrawDebugSphere(
             GetWorld(), 
             HitResult.ImpactPoint,
             25.f,
             12,
             FColor::Red,
             false,
-            -1.f);
+            -1.f);*/
 
         RotateTurret(HitResult.ImpactPoint);
 
@@ -65,6 +65,8 @@ void ATank::HandleDestruction()
 
     SetActorHiddenInGame(true);
     SetActorTickEnabled(false);
+
+    IsTankAlive = false;
 }
 
 // Called when the game starts or when spawned
